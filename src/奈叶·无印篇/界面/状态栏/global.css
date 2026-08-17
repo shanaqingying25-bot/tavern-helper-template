@@ -1,0 +1,23 @@
+:root {
+  --c-primary: #e87ea4;
+  --c-primary-soft: #fbe4ee;
+  --c-accent: #d4a017;
+  --c-accent-soft: #fdf3d7;
+  --c-bg: #fdf7f2;
+  --c-surface: #ffffff;
+  --c-text: #4a3b45;
+  --c-text-muted: #9a8a94;
+  --c-border: #ecd7e1;
+  --c-success: #5fae6a;
+  --c-warning: #e0a458;
+  --c-danger: #d96b6b;
+  --font-ui: "Sarasa Mono SC", "Sarasa Gothic SC", "Microsoft YaHei", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
