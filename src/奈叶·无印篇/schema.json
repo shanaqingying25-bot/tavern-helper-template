@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "世界": {
+      "type": "object",
+      "properties": {
+        "当前时间": {
+          "default": "0065年春",
+          "type": "string"
+        },
+        "当前地点": {
+          "default": "海鸣市",
+          "type": "string"
+        },
+        "剧情阶段": {
+          "default": "卷入·开端",
+          "type": "string",
+          "enum": [
+            "卷入·开端",
+            "相争·结缘",
+            "交织·真相",
+            "终幕·庭园"
+          ]
+        },
+        "圣石之种已封印数": {
+          "default": 0,
+          "type": "number"
+        },
+        "事件进展": {
+          "default": "尤诺为回收圣石之种来到地球，化形雪貂；圣石之种开始在市区引发异象。",
+          "type": "string"
+        }
+      }
+    },
+    "关系": {
+      "type": "object",
+      "properties": {
+        "奈叶": {
+          "type": "object",
+          "properties": {
+            "好感": {
+              "default": 20,
+              "type": "number"
+            }
+          }
+        },
+        "尤诺": {
+          "type": "object",
+          "properties": {
+            "信任": {
+              "default": 20,
+              "type": "number"
+            }
+          }
+        },
+        "菲特": {
+          "type": "object",
+          "properties": {
+            "好感": {
+              "default": 0,
+              "type": "number"
+            }
+          }
+        },
+        "艾尔芙": {
+          "type": "object",
+          "properties": {
+            "好感": {
+              "default": 0,
+              "type": "number"
+            }
+          }
+        },
+        "克洛诺": {
+          "type": "object",
+          "properties": {
+            "信任": {
+              "default": 10,
+              "type": "number"
+            }
+          }
+        },
+        "琳蒂": {
+          "type": "object",
+          "properties": {
+            "信任": {
+              "default": 10,
+              "type": "number"
+            }
+          }
+        }
+      },
+      "required": [
+        "奈叶",
+        "尤诺",
+        "菲特",
+        "艾尔芙",
+        "克洛诺",
+        "琳蒂"
+      ]
+    },
+    "主角": {
+      "type": "object",
+      "properties": {
+        "身份设定": {
+          "default": "卷入圣石之种事件的海鸣市居民",
+          "type": "string"
+        },
+        "立场": {
+          "default": "中立观望",
+          "type": "string"
+        },
+        "状态": {
+          "default": "健康",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "世界",
+    "关系",
+    "主角"
+  ]
+}
