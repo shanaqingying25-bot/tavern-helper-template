@@ -554,6 +554,9 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
         'vue-router': 'VueRouter',
         yaml: 'YAML',
         zod: 'z',
+        // 模板本地类型声明包（无运行时实现）：运行时由酒馆助手注入到 window.TavernHelper
+        '@types/function/chat_message': 'TavernHelper.createChatMessages',
+        '@types/function/slash': 'TavernHelper.triggerSlash',
       };
       if (request in global) {
         return callback(null, 'var ' + global[request as keyof typeof global]);
