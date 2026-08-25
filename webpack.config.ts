@@ -51,7 +51,11 @@ function common_path(lhs: string, rhs: string) {
 function glob_script_files() {
   const results: string[] = [];
 
+<<<<<<< HEAD
   fs.globSync(`src/**/index.{ts,tsx,js,jsx}`)
+=======
+  fs.globSync(`{示例,src}/**/index.{ts,tsx,js,jsx}`)
+>>>>>>> bc44abea1c2f7980dd9a2d9b909b4ad64bc8bdee
     .filter(
       file => process.env.CI !== 'true' || !fs.readFileSync(path.join(import.meta.dirname, file)).includes('@no-ci'),
     )
@@ -554,9 +558,12 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
         'vue-router': 'VueRouter',
         yaml: 'YAML',
         zod: 'z',
+<<<<<<< HEAD
         // 模板本地类型声明包（无运行时实现）：运行时由酒馆助手注入到 window.TavernHelper
         '@types/function/chat_message': 'TavernHelper.createChatMessages',
         '@types/function/slash': 'TavernHelper.triggerSlash',
+=======
+>>>>>>> bc44abea1c2f7980dd9a2d9b909b4ad64bc8bdee
       };
       if (request in global) {
         return callback(null, 'var ' + global[request as keyof typeof global]);
